@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+.photoCV {
+    width: 5em;
+    height: 5em;
+    border-radius: 10em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.containerPortfolio {
+    background-color: rgb(26, 61, 86);
+    width: 100%;
+    height: 29em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footerPortfolio {
+    background-color: rgb(7, 41, 66);
+    width: 100%;
+    height: 30em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.computerIcon {
+    width: 20em;
+    height: 20em;
+    margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.cvIcon {
+    width: 10em;
+    height: 10em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.computerIcon:hover, .cvIcon:hover {
+    transform: scale(1.2);
+}
+
+.portfolioModal {
+    background-image: url("assets/images/computer-opened.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black !important;
+}
+
+.portfolioContent {
+    color: black !important;
+    box-shadow: 15px 10px 10px black;
+}
+
+/*
+background-color: rgb(90, 78, 155) !important;
+*/
+
+.portfolioDialog{
+    border-radius: 5em;
+}
+
+table {
+    color: black !important;
 }

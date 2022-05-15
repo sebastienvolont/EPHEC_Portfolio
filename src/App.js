@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import {Routes, Route} from "react-router-dom"
+import Portfolio from "./components/Portfolio";
+import Cv from "./components/Cv";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App container-fluid">
+            <Routes>
+                <Route path={"/"} element={<Portfolio/>}></Route>
+                <Route path={"CV"} element={<Cv/>}></Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
