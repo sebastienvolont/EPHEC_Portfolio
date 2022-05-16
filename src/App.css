@@ -8,14 +8,16 @@
 
 .containerPortfolio {
     background-color: rgb(26, 61, 86);
-    width: 100%;
+    width: 95%;
     height: 29em;
+    float: right
 }
 
 .footerPortfolio {
     background-color: rgb(7, 41, 66);
-    width: 100%;
+    width: 95%;
     height: 30em;
+    float: right
 }
 
 .computerIcon {
@@ -55,4 +57,11 @@ background-color: rgb(90, 78, 155) !important;
 
 table {
     color: black !important;
+}
+
+.containerSideBar {
+    float: left;
+    width: 5%;
+    height: 58em;
+    background-color: grey;
 }

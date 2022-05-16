@@ -73,6 +73,7 @@ function Portfolio() {
     ];
     return (
         <div className={"portfolioPage container-fluid"}>
+            <div className={"containerSideBar"}> </div>
 
             <div className={"containerPortfolio"}>
                 <Link to={"/CV"} className={"btn btn-primary"}>CV</Link>
