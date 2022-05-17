@@ -6,6 +6,10 @@
     margin-right: auto;
 }
 
+.container-fluid {
+    padding: 0;
+}
+
 .containerPortfolio {
     /* background-color: rgb(26, 61, 86);*/
     width: 100%;
@@ -33,7 +37,7 @@
 }
 
 .portfolioModal {
-    background-image: url("assets/images/computer-opened.png");
+    /*background-image: url("assets/images/computer-opened.png");*/
     background-repeat: no-repeat;
     background-size: cover;
     color: black !important;

@@ -33,7 +33,7 @@ class ActivitiesTable extends React.Component {
                                     <p className={"text-center"}>
                                         <button type="button" className="btn btn-primary" data-toggle="modal"
                                                 data-target="#exampleModalLong" onClick={() => this.props.displayInformation(index)}>
-                                            <FontAwesomeIcon icon={faCircle} className={"text-primary"}/>
+                                            <FontAwesomeIcon icon="fa-solid fa-info" />
                                         </button>
                                     </p>
                                 </td>

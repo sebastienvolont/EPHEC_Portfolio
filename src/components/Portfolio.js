@@ -1,15 +1,12 @@
 import '../App.css'
-import {Link} from "react-router-dom";
 import photoCV from "../assets/images/2021-CV-Photo.jpeg";
 import mysqlIcon from "../assets/images/mysql-element.png";
 import computerIcon from '../assets/images/computer-element.png'
-import javascriptIcon from '../assets/images/javascript-element.png'
-import htmlIcon from '../assets/images/html-element.png'
-import pythonIcon from '../assets/images/python-element.png'
 import cvIcon from '../assets/images/cv-element.png'
 import ActivitiesTable from "./ActivitiesTable";
 
 import React from "react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import brico1 from '../assets/images/activities/01-brico/logo-brico.png'
 import brico2 from '../assets/images/activities/01-brico/contrat-travail_19-25aout.png'
@@ -19,9 +16,10 @@ import formationjava2 from '../assets/images/activities/02-formationjava/formati
 import formationjava3 from '../assets/images/activities/02-formationjava/formation-java-completee.png'
 import formationjava4 from '../assets/images/activities/02-formationjava/formation-java-completee02.png'
 
-import formationnodejs1 from '../assets/images/activities/03-formationnodejs/formation-nodejs-dashboard.png'
-import formationnodejs2 from '../assets/images/activities/03-formationnodejs/formation-nodejs-completee01.png'
-import formationnodejs3 from '../assets/images/activities/03-formationnodejs/formation-nodejs-completee02.png'
+import formationnodejs1 from '../assets/images/activities/03-formationnodejs/logo-OP.png'
+import formationnodejs2 from '../assets/images/activities/03-formationnodejs/formation-nodejs-dashboard.png'
+import formationnodejs3 from '../assets/images/activities/03-formationnodejs/formation-nodejs-completee01.png'
+import formationnodejs4 from '../assets/images/activities/03-formationnodejs/formation-nodejs-completee02.png'
 
 import devday1 from '../assets/images/activities/05-devday2022/logo-devday.png'
 import devday2 from '../assets/images/activities/05-devday2022/photo-groupe-devday.jpg'
@@ -44,10 +42,6 @@ import gamejam4 from '../assets/images/activities/08-gamejam2022/photo-gamejam02
 import gamejam5 from '../assets/images/activities/08-gamejam2022/photo-gamejam03.jpg'
 import gamejam6 from '../assets/images/activities/08-gamejam2022/screen-menu-gamejam.png'
 import gamejam7 from '../assets/images/activities/08-gamejam2022/screen-jeu.png'
-
-
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import modal from "bootstrap/js/src/modal";
 import ModalActivity from "./ModalActivity";
 
 class Portfolio extends React.Component {
@@ -63,8 +57,8 @@ class Portfolio extends React.Component {
                     type: "Communication et gestion",
                     name: "Job étudiant Brico",
                     hoursSpent: 152,
-                    date: "Août 2019",
-                    description: "Lors du mois d'août jusqu'au début du mois de septembre, j'ai réalisé un job étudiant chez Brico" +
+                    date: "04/08/2019 au 01/09/2019",
+                    description: "Lors du mois d'août jusqu'au début du mois de septembre, j'ai réalisé un job étudiant chez Brico. " +
                         "Mon job étudiant chez Brico consistait principalement à la\n" +
                         "gestion, le réapprovisionnement et l'agencement des stocks. La communication avec\n" +
                         "les clients était également très présente.",
@@ -76,7 +70,13 @@ class Portfolio extends React.Component {
                     name: "OpenClassrooms Apprenez à programmer en Java",
                     hoursSpent: 10,
                     date: "05/09/2020",
-                    description: "",
+                    description: "Lors de la rentrée 2020, je me suis intéressé au développement applicatif avec Java. " +
+                        "J'avais pour but d'avoir une première approche avec ce langage car il était prévu pour notre 2ème" +
+                        " année à l'EPHEC mais finalement il avait été remplacé par le langage Python. Cela m'a permis tout " +
+                        "de même de pouvoir avoir une vision sur ce lanages et ses différences avec Python. La formation était divisée en 3 partie : " +
+                        " - Les bases du langages (Variables, Conditions, boucles,...) " +
+                        " - Programmation orienté objet (Polymorphisme, piles, paramètres" +
+                        " - Gestion d'erreurs, lambda, fichiers ",
                     images: [formationjava1, formationjava2, formationjava3, formationjava4]
                 },
                 {
@@ -85,7 +85,10 @@ class Portfolio extends React.Component {
                     name: "Passez au Full Stack avec Node.js, Express et MongoDB",
                     hoursSpent: 10,
                     date: "03/02/2021",
-                    description: "",
+                    description: "Lors du deuxième quadrimestre de ma deuxième année, je me suis intéressé" +
+                        "au framework nodejs, au backend express et à la base de données MongoDB" +
+                        "Nous étions parti sur du Symfony pour notre projet web mais je cherchais un environnement s'adaptant " +
+                        "facilement avec le framework frontend React",
                     images: [formationnodejs1, formationnodejs2, formationnodejs3]
                 },
                 {
@@ -93,34 +96,48 @@ class Portfolio extends React.Component {
                     type: "Formation Hardware / électronique",
                     name: "à compléter",
                     hoursSpent: 10,
-                    date: "à compléter",
+                    date: "Août 2022",
                     description: "",
-                    images: [formationnodejs1, formationnodejs2, formationnodejs3]
+                    images: [formationnodejs1, formationnodejs2, formationnodejs3, formationnodejs4]
                 },
                 {
                     number: 5,
                     type: "Conférence en présentiel",
                     name: "DevDay 2022",
                     hoursSpent: 9,
-                    date: "23/11/2021", description: "",
+                    date: "23/11/2021",
+                    description: "Grâce à l'EPHEC, j'ai eu l'opportunité de pouvoir me rendre à l'édition 2022 du" +
+                        "Devday lors d'une journée. J'ai participé à 4 conférences:" +
+                        "- The Effective Developer - Work Smarter, Not Harder (EN)" +
+                        "- On peut vraiment faire tout ça avec une Web App?!? (FR)" +
+                        "- Visual Studio 2022 - Codez comme un ninja (FR)" +
+                        "- L'immutabilité c'est maintenant (C#) (FR)" +
+                        "- Introduction à Appcenter pour la distribution et le test" +
+                        "de vos applications mobiles (FR)",
                     images: [devday1, devday2, devday3, devday4]
                 },
                 {
                     number: 6,
                     type: "Conférence en distanciel",
                     name: "MIC Préparation au stage Conférence Git",
-                    hoursSpent: 2,
-                    date: "Février 2022",
-                    description: "",
+                    hoursSpent: 1,
+                    date: "03/02/2022",
+                    description: "Pour les débuts de stage 2022, le MIC a organisé une journée de conférence pour apporter une aide" +
+                        "au étudiant démarrant leur stage en entreprise lors de ce 2 ème quadrimestre. J'ai alors assisté à la session " +
+                        "sur 'Git et Gitflow, la base pour avancer'. Étant plutôt habitué aux outils fournies par les IDE ou par Github Desktop" +
+                        "Cela m'a permit d'avoir un très bon rappel sur l'utilisation de git en ligne de commande.",
                     images: [mic1, mic2]
                 },
                 {
                     number: 7,
                     type: "Conférence en distanciel",
                     name: "LeWagon Atelier DataAnalysis",
-                    hoursSpent: 10,
-                    date: "Mars 2022",
-                    description: "",
+                    hoursSpent: 2,
+                    date: "31/03/2022",
+                    description: "LeWagon est une école proposant des événements de formations d'initiation sur Bruxelles ou à distance." +
+                        "Je me suis intéressé à une des sessions sur le Data analysis avec les librairies pandas et NumPy." +
+                        "Lors de cette formation, il y avait une partie théorique et pratique dans l'environnement de " +
+                        "Jupyter Notebooks. J'ai été surpris de la qualité de cette formation complètement gratuite. ",
                     images: [lewagon1, lewagon2, lewagon3, lewagon4]
                 },
                 {
@@ -174,19 +191,28 @@ class Portfolio extends React.Component {
 
         }
         return (
-            <div className={"portfolioPage container-fluid"}>
+            <div className={"portfolioPage container-fluid p-0"}>
 
                 <div className={"containerPortfolio"} style={{backgroundColor: "rgb(26, 61, 86)"}}>
-                    <center><h1 className={"text-white"}> Sébastien <img src={photoCV} className={"photoCV"}
-                                                                         alt={"CV Sébastien VOLONT"}/> Volont</h1>
-                    </center>
+                    <div className={"row"}>
+                        <div className={"row"}></div>
+                        <div className={"row"}>
+                        <center><h1 className={"text-white"}> Sébastien <img src={photoCV} className={"photoCV"}
+                                                                             alt={"CV Sébastien VOLONT"}/> Volont</h1>
+                        </center>
+                        </div>
+                        <div className={"row"}></div>
+
+
+                    </div>
                     <div className={"container-fluid"}>
                         <div className={"row"}>
                             <div className={"col"}></div>
                             <div className={"col"}>
                                 <h2 className={"text-center text-white"}> Qui suis-je ?</h2>
                                 <h4 className={"text-center text-white"}>
-                                    Je m'appelle Sébastien Volont, je suis actuellement étudiant en dernière année de bachelier en
+                                    Je m'appelle Sébastien Volont, je suis actuellement étudiant en dernière année de
+                                    bachelier en
                                     Technologie de l'informatique à l'EPHEC Louvain-La-Neuve
                                 </h4>
                             </div>
@@ -196,25 +222,42 @@ class Portfolio extends React.Component {
                         <div className={"row"}>
                             <div className={"col"}>
                                 <h1 className={"text-white"}> TECHNOLOGIES - FRAMEWORKS </h1>
-                                <div className={"d-flex flex-row"}>
-                                    <p className={"p-5"}><img src={mysqlIcon} className={"mysqlElement"}
-                                                              alt={"Mysql icon"}/></p>
-                                    <p className={"p-5"}>test</p>
-                                    <p className={"p-5"}>test</p>
-                                    <p className={"p-5"}>test</p>
-                                    <p className={"p-5"}>test</p>
-                                </div>
+                                <ul className={"list-group list-group-horizontal-md"}>
+                                    <li className="list-group-item bg-transparent"><img src={mysqlIcon} className={"mysqlElement"}
+                                                                         alt={"Mysql icon"}/></li>
+                                    <li className="list-group-item bg-transparent">test</li>
+                                    <li className="list-group-item bg-transparent">test</li>
+                                    <li className="list-group-item bg-transparent">test</li>
+                                    <li className="list-group-item bg-transparent">test</li>
+                                </ul>
                             </div>
                             <div className={"col"}>
                             </div>
                             <div className={"col"}>
                                 <ul className="list-group">
-                                    <li className="list-group-item bg-transparent text-white">Nivelles, Belgique</li>
-                                    <li className="list-group-item bg-transparent text-white">sebastien.volont27@gmail.com</li>
-                                    <li className="list-group-item bg-transparent text-white">+32 495 70 56 28</li>
-                                    <li className="list-group-item bg-transparent text-white">Né le 27/10/2001</li>
-                                    <li className="list-group-item bg-transparent text-white">github.com/sebastienvolont</li>
+                                    <li className="list-group-item bg-transparent text-white"> <FontAwesomeIcon icon="fas fa-map-marker-alt" /> Nivelles, Belgique</li>
+                                    <li className="list-group-item bg-transparent text-white"><FontAwesomeIcon icon="fas fa-at" /> sebastien.volont27@gmail.com</li>
+                                    <li className="list-group-item bg-transparent text-white"><FontAwesomeIcon icon="fas fa-mobile-alt" /> +32 495 70 56 28</li>
+                                    <li className="list-group-item bg-transparent text-white"><FontAwesomeIcon icon="fas fa-user" /> Né le 27/10/2001</li>
+                                    <li className="list-group-item bg-transparent text-white"><FontAwesomeIcon icon="fas fa-globe" /> github.com/sebastienvolont</li>
                                 </ul>
+                            </div>
+                        </div>
+                        <div className={"row"}>
+                            <div className={"col"}>
+                                <h1 className={"text-white"}> LANGAGES INFORMATIQUES </h1>
+                                <ul className={"list-group list-group-horizontal-md"}>
+                                    <li className="list-group-item bg-transparent"><img src={mysqlIcon} className={"mysqlElement"}
+                                                                         alt={"Mysql icon"}/></li>
+                                    <li className="list-group-item bg-transparent">test</li>
+                                    <li className="list-group-item bg-transparent">test</li>
+                                    <li className="list-group-item bg-transparent">test</li>
+                                    <li className="list-group-item bg-transparent">test</li>
+                                </ul>
+                            </div>
+                            <div className={"col"}>
+                            </div>
+                            <div className={"col"}>
                             </div>
                         </div>
                     </div>
@@ -275,14 +318,29 @@ class Portfolio extends React.Component {
                             <ul className="nav justify-content-center border-bottom pb-3 mb-3">
                                 <li className="nav-item"><a href="https://github.com/sebastienvolont"
                                                             className="nav-link px-2 text-muted"
-                                                            target="_blank">Github</a></li>
+                                                            target="_blank"><i className="fa-brands fa-github"></i></a>
+                                </li>
                                 <li className="nav-item"><a
                                     href="https://www.linkedin.com/in/s%C3%A9bastien-volont-499037223"
-                                    className="nav-link px-2 text-muted" target="_blank">Linkedin</a></li>
+                                    className="nav-link px-2 text-muted" target="_blank"><i
+                                    className="fa-brands fa-github"></i></a></li>
                             </ul>
                         </footer>
                     </div>
                 </div>
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
             </div>
         )
     }
