@@ -9,7 +9,7 @@ import pythonIcon from '../assets/images/python-element.png'
 import cvIcon from '../assets/images/cv-element.png'
 import ActivitiesTable from "./ActivitiesTable";
 
-import brico1 from '../assets/images/activities/01-brico/logo-brico.png.crdownload'
+import brico1 from '../assets/images/activities/01-brico/logo-brico.png'
 import brico2 from '../assets/images/activities/01-brico/contrat-travail_19-25aout.png'
 
 import formationjava1 from '../assets/images/activities/02-formationjava/logo-OP.png'
@@ -138,17 +138,17 @@ function Portfolio(props) {
     return (
         <div className={"portfolioPage container-fluid"}>
 
-            <div className={"containerSideBar"}></div>
-
-            <div className={"containerPortfolio"}>
+            <div className={"containerPortfolio"} style={{ backgroundColor: "rgb(26, 61, 86)"}}>
                 <Link to={"/CV"} className={"btn btn-primary"}>CV</Link>
                 <center><h1 className={"text-white"}> Sébastien <img src={photoCV} className={"photoCV"}
                                                                      alt={"CV Sébastien VOLONT"}/> Volont</h1></center>
+                <div className={"container-fluid"}>
                 <div className={"row"}>
-                    <div className={"col"}>test</div>
-                    <div className={"col"}><h3 className={"text-center"}>Bonjour ! Je m'appelle Sébastien Volont, je suis actuellement un étudiant en bachelier de Technologie de l'informatique à l'EPHEC Louvain-La-Neuve </h3></div>
+                    <div className={"col"}></div>
+                    <div className={"col"}><h3 className={"text-center text-white"}>Bonjour ! Je m'appelle Sébastien Volont, je suis actuellement un étudiant en bachelier de Technologie de l'informatique à l'EPHEC Louvain-La-Neuve </h3></div>
                     <div className={"col"}></div>
                 </div>
+
                 <div className={"row"}>
                     <div className={"col"}>
                         <h1 className={"text-white"}> TECHNOLOGIES - FRAMEWORKS </h1>
@@ -164,31 +164,12 @@ function Portfolio(props) {
                     </div>
                     <div className={"col"}>
                         <ul className="list-group">
-                            <li className="list-group-item">Nivelles, Belgique</li>
-                            <li className="list-group-item">sebastien.volont27@gmail.com</li>
-                            <li className="list-group-item">+32 495 70 56 28</li>
-                            <li className="list-group-item">Né le 27/10/2001</li>
-                            <li className="list-group-item">github.com/sebastienvolont</li>
+                            <li className="list-group-item bg-transparent text-white">Nivelles, Belgique</li>
+                            <li className="list-group-item bg-transparent text-white">sebastien.volont27@gmail.com</li>
+                            <li className="list-group-item bg-transparent text-white">+32 495 70 56 28</li>
+                            <li className="list-group-item bg-transparent text-white">Né le 27/10/2001</li>
+                            <li className="list-group-item bg-transparent text-white">github.com/sebastienvolont</li>
                         </ul>
-                    </div>
-                </div>
-                <div className={"row"}>
-                    <div className={"col"}>
-                        <h1 className={"text-white"}>  LANGAGES INFORMATIQUE </h1>
-                        <div className={"d-flex flex-row langagesElements"}>
-                            <p className={"p-5"}><img src={javascriptIcon} className={"javascriptElement"} alt={"Javascript icon"}/></p>
-                            <p className={"p-5"}><img src={htmlIcon} className={"htmlElement"} alt={"html icon"}/></p>
-                            <p className={"p-5"}><img src={pythonIcon} className={"htmlElement"} alt={"html icon"}/></p>
-                        </div>
-                        <div className={"d-flex flex-row langagesElements"}>
-                            <p className={"p-5"}><img src={javascriptIcon} className={"javascriptElement"} alt={"Javascript icon"}/></p>
-                            <p className={"p-5"}><img src={htmlIcon} className={"htmlElement"} alt={"html icon"}/></p>
-                            <p className={"p-5"}><img src={pythonIcon} className={"htmlElement"} alt={"html icon"}/></p>
-                        </div>
-                    </div>
-                    <div className={"col"}>
-                    </div>
-                    <div className={"col"}>
                     </div>
                 </div>
             </div>
@@ -242,10 +223,10 @@ function Portfolio(props) {
                     <ul className="nav justify-content-center border-bottom pb-3 mb-3">
                         <li className="nav-item"><a href="https://github.com/sebastienvolont" className="nav-link px-2 text-muted" target="_blank">Github</a></li>
                         <li className="nav-item"><a href="https://www.linkedin.com/in/s%C3%A9bastien-volont-499037223" className="nav-link px-2 text-muted" target="_blank">Linkedin</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Mail</a></li>
                     </ul>
                 </footer>
             </div>
+        </div>
         </div>
 )
 }
