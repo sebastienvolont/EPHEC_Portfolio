@@ -42,6 +42,8 @@ import gamejam4 from '../assets/images/activities/08-gamejam2022/photo-gamejam02
 import gamejam5 from '../assets/images/activities/08-gamejam2022/photo-gamejam03.jpg'
 import gamejam6 from '../assets/images/activities/08-gamejam2022/screen-menu-gamejam.png'
 import gamejam7 from '../assets/images/activities/08-gamejam2022/screen-jeu.png'
+
+
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function Portfolio(props) {
@@ -139,7 +141,6 @@ function Portfolio(props) {
         <div className={"portfolioPage container-fluid"}>
 
             <div className={"containerPortfolio"} style={{ backgroundColor: "rgb(26, 61, 86)"}}>
-                <Link to={"/CV"} className={"btn btn-primary"}>CV</Link>
                 <center><h1 className={"text-white"}> Sébastien <img src={photoCV} className={"photoCV"}
                                                                      alt={"CV Sébastien VOLONT"}/> Volont</h1></center>
                 <div className={"container-fluid"}>
@@ -189,7 +190,7 @@ function Portfolio(props) {
                 <div className={"row"}>
                     <div className={"col"}>
                         <div>
-                            <a href={"file:assets/files/CV/2021-CV-VOLONT_Sebastien.pdf"}><img
+                            <a href={"/static/media/2021-CV-VOLONT_Sebastien.cc32eb1c39aec8ca77a5.pdf"}  target="_blank"><img
                                 className={"cvIcon img-fluid mx-auto d-block"} src={cvIcon} alt={"CV Icon"}/></a>
                             <p className={"text-center text-white"}>CV</p>
                             <p className={"text-center text-white"}><a href={""}> Télécharger mon CV </a></p>
