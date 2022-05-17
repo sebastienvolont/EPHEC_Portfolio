@@ -14,22 +14,23 @@ class ModalActivity extends React.Component {
         return (
             <div className="container-fluid">
                 <div className="">
+                    <button className={"btn btn-primary"} onClick={this.props.displayActivitiesTable}> Retour </button>
 
                 </div>
                 <div className="text-center">
-                    <h1> {this.props.name} </h1>
-                    <img src={this.props.images[0]} className={"img-fluid rounded mx-auto d-block"} alt={""}/>
+                    <h1> {this.props.activityElement.name} </h1>
+                    <img src={this.props.activityElement.images[0]} className={"img-fluid rounded mx-auto d-block"} alt={""}/>
                 </div>
 
                 <div>
                     <p className={"fs-4"}>
-                        {this.props.description}
+                        {this.props.activityElement.description}
                     </p>
                 </div>
 
                 <div>
                     {
-                        this.props.images.map(image =>
+                        this.props.activityElement.images.map(image =>
                             <img className="d-block w-100" src={image} alt=""/>
                         )
                     }

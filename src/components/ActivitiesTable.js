@@ -1,7 +1,6 @@
 import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCircle} from '@fortawesome/fontawesome-free-solid'
-import ModalActivity from "./ModalActivity";
 
 class ActivitiesTable extends React.Component {
 
@@ -23,8 +22,8 @@ class ActivitiesTable extends React.Component {
                     </thead>
                     <tbody>
                     {
-                        this.props.portfolioActivities.map(activity =>
-                            <tr key={activity.number} className={"accordion-item"}>
+                        this.props.portfolioActivities.map((activity, index) =>
+                            <tr key={index} className={"accordion-item"}>
                                 <td><p className={"text-center"}> {activity.number} </p></td>
                                 <td><p className={"text-center"}> {activity.type} </p></td>
                                 <td><p className={"text-center"}> {activity.name} </p></td>
@@ -33,7 +32,7 @@ class ActivitiesTable extends React.Component {
                                 <td>
                                     <p className={"text-center"}>
                                         <button type="button" className="btn btn-primary" data-toggle="modal"
-                                                data-target="#exampleModalLong">
+                                                data-target="#exampleModalLong" onClick={() => this.props.displayInformation(index)}>
                                             <FontAwesomeIcon icon={faCircle} className={"text-primary"}/>
                                         </button>
                                     </p>
@@ -54,11 +53,7 @@ class ActivitiesTable extends React.Component {
 
                 <div>
 
-                {
-                    this.props.portfolioActivities.map(activity =>
-                        <ModalActivity description={activity.description} images={activity.images} name={activity.name}/>
-                    )
-                }
+
                 </div>
 
             </div>
