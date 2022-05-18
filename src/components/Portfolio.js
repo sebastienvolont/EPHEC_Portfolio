@@ -1,9 +1,23 @@
 import '../App.css'
 import photoCV from "../assets/images/2021-CV-Photo.jpeg";
-import mysqlIcon from "../assets/images/mysql-element.png";
+import mysqlIcon from "../assets/images/mysql-element.svg";
 import computerIcon from '../assets/images/computer-element.png'
 import cvIcon from '../assets/images/cv-element.png'
 import ActivitiesTable from "./ActivitiesTable";
+import reactIcon from'../assets/images/react-element.svg'
+import symfonyIcon from'../assets/images/symfony-element.svg'
+import bootstrapIcon from'../assets/images/bootstrap-element.svg'
+import dockerIcon from'../assets/images/docker-element.svg'
+import djangoIcon from'../assets/images/django-element.svg'
+import javascriptIcon from'../assets/images/javascript-element.svg'
+import htmlIcon from'../assets/images/html-element.svg'
+import cssIcon from'../assets/images/css-element.svg'
+import pythonIcon from'../assets/images/python-element.svg'
+import sqlIcon from'../assets/images/sql-element.svg'
+import cIcon from'../assets/images/c-element.svg'
+import phpIcon from'../assets/images/php-element.svg'
+import ephecIcon from'../assets/images/ephec-element.svg'
+
 
 import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -36,9 +50,9 @@ import lewagon3 from '../assets/images/activities/07-conferencelewagon/conferenc
 import lewagon4 from '../assets/images/activities/07-conferencelewagon/conference-lewagon03.jpg'
 
 import gamejam1 from '../assets/images/activities/08-gamejam2022/logo-louvainlinux.png'
-import gamejam2 from '../assets/images/activities/08-gamejam2022/theme-gamejam.jpg'
-import gamejam3 from '../assets/images/activities/08-gamejam2022/photo-gamejam01.jpg'
-import gamejam4 from '../assets/images/activities/08-gamejam2022/photo-gamejam02.jpg'
+import gamejam2 from '../assets/images/activities/08-gamejam2022/photo-gamejam02.jpg'
+import gamejam3 from '../assets/images/activities/08-gamejam2022/theme-gamejam.jpg'
+import gamejam4 from '../assets/images/activities/08-gamejam2022/photo-gamejam01.jpg'
 import gamejam5 from '../assets/images/activities/08-gamejam2022/photo-gamejam03.jpg'
 import gamejam6 from '../assets/images/activities/08-gamejam2022/screen-menu-gamejam.png'
 import gamejam7 from '../assets/images/activities/08-gamejam2022/screen-jeu.png'
@@ -179,7 +193,6 @@ class Portfolio extends React.Component {
 
 
     render() {
-        console.log(this.state.activityElement)
         let modalComponent;
         if (this.state.areActivitiesDisplaying) {
             modalComponent = <ActivitiesTable portfolioActivities={this.state.portfolioActivities}
@@ -191,23 +204,21 @@ class Portfolio extends React.Component {
 
         }
         return (
-            <div className={"portfolioPage container-fluid p-0"}>
-
-                <div className={"containerPortfolio"} style={{backgroundColor: "rgb(26, 61, 86)"}}>
+                <div className={"containerPortfolio container-fluid"} style={{backgroundColor: "rgb(26, 61, 86)"}}>
                     <div className={"row"}>
-                        <div className={"row"}></div>
-                        <div className={"row"}>
-                        <center><h1 className={"text-white"}> Sébastien <img src={photoCV} className={"photoCV"}
+                        <div className={"col"}></div>
+                        <div className={"col"}>
+                        <center><h1 className={"text-white"}> Sébastien <img src={photoCV} className={"photoCV img-responsive"}
                                                                              alt={"CV Sébastien VOLONT"}/> Volont</h1>
                         </center>
                         </div>
-                        <div className={"row"}></div>
+                        <div className={"col"}></div>
 
 
                     </div>
-                    <div className={"container-fluid"}>
+                    <div>
                         <div className={"row"}>
-                            <div className={"col"}></div>
+                            <div className={"col d-none d-lg-block"}></div>
                             <div className={"col"}>
                                 <h2 className={"text-center text-white"}> Qui suis-je ?</h2>
                                 <h4 className={"text-center text-white"}>
@@ -216,49 +227,129 @@ class Portfolio extends React.Component {
                                     Technologie de l'informatique à l'EPHEC Louvain-La-Neuve
                                 </h4>
                             </div>
-                            <div className={"col"}></div>
+                            <div className={"col"}>
+                                <ul className="list-group">
+                                    <li className="list-group-item bg-transparent text-white border-0 mx-auto"> <FontAwesomeIcon icon="fas fa-map-marker-alt" /> Nivelles, Belgique</li>
+                                    <li className="list-group-item bg-transparent text-white border-0 mx-auto"><FontAwesomeIcon icon="fas fa-at" /> sebastien.volont27@gmail.com</li>
+                                    <li className="list-group-item bg-transparent text-white border-0 mx-auto"><FontAwesomeIcon icon="fas fa-mobile-alt" /> +32 495 70 56 28</li>
+                                    <li className="list-group-item bg-transparent text-white border-0 mx-auto"><FontAwesomeIcon icon="fas fa-user" /> Né le 27/10/2001</li>
+                                    <li className="list-group-item bg-transparent text-white border-0 mx-auto"><FontAwesomeIcon icon="fas fa-globe" /> github.com/sebastienvolont</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={"row"}>
+                            <div className={"col"}>
+                                <h1 className={"text-white text-center"}> LANGAGES INFORMATIQUES </h1>
+                                <ul className={"list-group list-group-horizontal-md d-flex"}>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={htmlIcon} className={"mysqlElement img-fluid"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "80%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={javascriptIcon} className={"mysqlElement img-fluid"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "70%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={pythonIcon} className={"mysqlElement img-fluid"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "65%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={cssIcon} className={"mysqlElement img-fluid"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "60%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={sqlIcon} className={"mysqlElement img-fluid"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "50%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={phpIcon} className={"mysqlElement img-fluid"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "35%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={cIcon} className={"mysqlElement img-fluid"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "25%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+
+                                </ul>
+                                <h1 className={"text-white text-center"}> TECHNOLOGIES </h1>
+                                <ul className={"list-group list-group-horizontal-md d-flex"}>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={mysqlIcon} className={"mysqlElement img-responsive"}
+                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "75%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={bootstrapIcon} className={"mysqlElement img-responsive"}
+                                                                                        alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "65%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={reactIcon} className={"mysqlElement img-responsive"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "60%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={dockerIcon} className={"mysqlElement img-responsive"}
+                                                                                        alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "50%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={djangoIcon} className={"mysqlElement img-responsive"}
+                                                                                        alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "45%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                    <li className="list-group-item bg-transparent border-0 mx-auto"><img src={symfonyIcon} className={"mysqlElement img-responsive"}
+                                                                                                         alt={"Mysql icon"}/>
+                                        <div className="progress">
+                                            <div className="progress-bar" role="progressbar" style={{width: "25%"}}
+                                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={"row"}>
+                            <div className={"col"}>
+
+                            </div>
+                            <div className={"col"}>
+                            </div>
+                            <div className={"col"}>
+                            </div>
                         </div>
 
                         <div className={"row"}>
+                            <div className={"col"}></div>
                             <div className={"col"}>
-                                <h1 className={"text-white"}> TECHNOLOGIES - FRAMEWORKS </h1>
-                                <ul className={"list-group list-group-horizontal-md"}>
-                                    <li className="list-group-item bg-transparent"><img src={mysqlIcon} className={"mysqlElement"}
-                                                                         alt={"Mysql icon"}/></li>
-                                    <li className="list-group-item bg-transparent">test</li>
-                                    <li className="list-group-item bg-transparent">test</li>
-                                    <li className="list-group-item bg-transparent">test</li>
-                                    <li className="list-group-item bg-transparent">test</li>
-                                </ul>
+                                <h2 className={"text-center text-white"}> Projet Personnel </h2>
+                                <h5 className={"text-center text-white"}>
+                                    Passionné par les nouvelles technolgies, je m'intéresse en grande partieau développement
+                                    web et applicatif, c'est pourquoi je souhaiterais approfondir mes connaissances
+                                    dans des frameworks, langages et technologies. Le domaine du réseau m'attire également
+                                    et j'aimerais passer la première certification cisco CCNA lorsque j'en aurais l'occasion.
+                                    Suite à mon bachelier, j'envisage de continuer ma formation avec un master en sciences informatique.
+                                </h5>
                             </div>
-                            <div className={"col"}>
-                            </div>
-                            <div className={"col"}>
-                                <ul className="list-group">
-                                    <li className="list-group-item bg-transparent text-white"> <FontAwesomeIcon icon="fas fa-map-marker-alt" /> Nivelles, Belgique</li>
-                                    <li className="list-group-item bg-transparent text-white"><FontAwesomeIcon icon="fas fa-at" /> sebastien.volont27@gmail.com</li>
-                                    <li className="list-group-item bg-transparent text-white"><FontAwesomeIcon icon="fas fa-mobile-alt" /> +32 495 70 56 28</li>
-                                    <li className="list-group-item bg-transparent text-white"><FontAwesomeIcon icon="fas fa-user" /> Né le 27/10/2001</li>
-                                    <li className="list-group-item bg-transparent text-white"><FontAwesomeIcon icon="fas fa-globe" /> github.com/sebastienvolont</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className={"row"}>
-                            <div className={"col"}>
-                                <h1 className={"text-white"}> LANGAGES INFORMATIQUES </h1>
-                                <ul className={"list-group list-group-horizontal-md"}>
-                                    <li className="list-group-item bg-transparent"><img src={mysqlIcon} className={"mysqlElement"}
-                                                                         alt={"Mysql icon"}/></li>
-                                    <li className="list-group-item bg-transparent">test</li>
-                                    <li className="list-group-item bg-transparent">test</li>
-                                    <li className="list-group-item bg-transparent">test</li>
-                                    <li className="list-group-item bg-transparent">test</li>
-                                </ul>
-                            </div>
-                            <div className={"col"}>
-                            </div>
-                            <div className={"col"}>
-                            </div>
+                            <div className={"col"}></div>
                         </div>
                     </div>
                     <div className={"footerPortfolio"}>
@@ -272,6 +363,8 @@ class Portfolio extends React.Component {
                                 <p className={"text-center text-white"}>Portfolio</p>
                             </div>
                             <div className={"col"}>
+
+
                             </div>
                         </div>
                         <div className={"row"}>
@@ -291,6 +384,10 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                             <div className={"col"}>
+                            </div>
+                            <div className={"col"}>
+                                <a href={"https://www.ephec.be/formations/haute-ecole/bachelier-en-technologie-de-linformatique"} target={"_blank"}><img src={ephecIcon} alt={"EPHEC"} className={"mx-auto d-block img-ephec"} style={{backgroundColor: "orange"}}/> </a>
+                                <p className={"text-white text-center"}>Formation EPHEC</p>
                             </div>
                         </div>
                     </div>
@@ -313,35 +410,20 @@ class Portfolio extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="container">
+                    <div className="">
                         <footer className="py-3 my-4">
                             <ul className="nav justify-content-center border-bottom pb-3 mb-3">
                                 <li className="nav-item"><a href="https://github.com/sebastienvolont"
                                                             className="nav-link px-2 text-muted"
-                                                            target="_blank"><i className="fa-brands fa-github"></i></a>
+                                                            target="_blank"><p className={"text-white"}>Github</p></a>
                                 </li>
                                 <li className="nav-item"><a
                                     href="https://www.linkedin.com/in/s%C3%A9bastien-volont-499037223"
-                                    className="nav-link px-2 text-muted" target="_blank"><i
-                                    className="fa-brands fa-github"></i></a></li>
+                                    className="nav-link px-2 text-muted" target="_blank"><p className={"text-white"}>Linkedin</p></a></li>
                             </ul>
                         </footer>
                     </div>
                 </div>
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-            </div>
         )
     }
 }

@@ -6,57 +6,57 @@ class ActivitiesTable extends React.Component {
 
     render() {
         let nombresHeures = 0;
-        console.log(this.props.portfolioActivities)
         return (
             <div className={"container-fluid table-responsive"}>
-                <table className="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th className={"text-center"}> Numéro</th>
-                        <th className={"text-center"}> Type</th>
-                        <th className={"text-center"}> Nom</th>
-                        <th className={"text-center"}> Temps consacré</th>
-                        <th className={"text-center"}> Date</th>
-                        <th className={"text-center"}> Plus d'informations</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {
-                        this.props.portfolioActivities.map((activity, index) =>
-                            <tr key={index} className={"accordion-item"}>
-                                <td><p className={"text-center"}> {activity.number} </p></td>
-                                <td><p className={"text-center"}> {activity.type} </p></td>
-                                <td><p className={"text-center"}> {activity.name} </p></td>
-                                <td><p className={"text-center"}> {activity.hoursSpent} h </p></td>
-                                <td><p className={"text-center"}> {activity.date} </p></td>
-                                <td>
-                                    <p className={"text-center"}>
-                                        <button type="button" className="btn btn-primary" data-toggle="modal"
-                                                data-target="#exampleModalLong" onClick={() => this.props.displayInformation(index)}>
-                                            <FontAwesomeIcon icon="fa-solid fa-info" />
-                                        </button>
-                                    </p>
-                                </td>
-                            </tr>
-                        )
-                    }
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>Total heures : </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
+                    <table className="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope={"col"} className={"text-center"}> Numéro</th>
+                            <th scope={"col"} className={"text-center"}> Type</th>
+                            <th scope={"col"} className={"text-center"}> Nom</th>
+                            <th scope={"col"} className={"text-center"}> Temps consacré</th>
+                            <th scope={"col"} className={"text-center"}> Date</th>
+                            <th scope={"col"} className={"text-center"}> Plus d'informations</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {
+                            this.props.portfolioActivities.map((activity, index) =>
+                                <tr key={index} className={"accordion-item"}>
+                                    <th scope={"row"}><p className={"text-center"}> {activity.number} </p></th>
+                                    <td><p className={"text-center"}> {activity.type} </p></td>
+                                    <td><p className={"text-center"}> {activity.name} </p></td>
+                                    <td><p className={"text-center"}> {activity.hoursSpent} h </p></td>
+                                    <td><p className={"text-center"}> {activity.date} </p></td>
+                                    <td>
+                                        <p className={"text-center"}>
+                                            <button type="button" className="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleModalLong"
+                                                    onClick={() => this.props.displayInformation(index)}>
+                                                <FontAwesomeIcon icon="fa-solid fa-info"/>
+                                            </button>
+                                        </p>
+                                    </td>
+                                </tr>
+                            )
+                        }
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Total heures :</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-                <div>
+                    <div>
 
+
+                    </div>
 
                 </div>
-
-            </div>
 
         )
     }
