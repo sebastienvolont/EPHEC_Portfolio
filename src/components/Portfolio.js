@@ -53,9 +53,10 @@ import gamejam1 from '../assets/images/activities/08-gamejam2022/logo-louvainlin
 import gamejam2 from '../assets/images/activities/08-gamejam2022/photo-gamejam02.jpg'
 import gamejam3 from '../assets/images/activities/08-gamejam2022/theme-gamejam.jpg'
 import gamejam4 from '../assets/images/activities/08-gamejam2022/photo-gamejam01.jpg'
-import gamejam5 from '../assets/images/activities/08-gamejam2022/photo-gamejam03.jpg'
+import gamejam5 from '../assets/images/activities/08-gamejam2022/screen-jeu.png'
 import gamejam6 from '../assets/images/activities/08-gamejam2022/screen-menu-gamejam.png'
-import gamejam7 from '../assets/images/activities/08-gamejam2022/screen-jeu.png'
+import gamejam7 from '../assets/images/activities/08-gamejam2022/photo-gamejam03.jpg'
+import gamejam8 from '../assets/images/activities/08-gamejam2022/logo-oniryx.png'
 import ModalActivity from "./ModalActivity";
 
 class Portfolio extends React.Component {
@@ -71,11 +72,14 @@ class Portfolio extends React.Component {
                     type: "Communication et gestion",
                     name: "Job étudiant Brico",
                     hoursSpent: 152,
+                    hoursValuable: 10,
                     date: "04/08/2019 au 01/09/2019",
                     description: "Lors du mois d'août jusqu'au début du mois de septembre, j'ai réalisé un job étudiant chez Brico. " +
-                        "Mon job étudiant chez Brico consistait principalement à la\n" +
+                        "Mon job étudiant consistait principalement à la\n" +
                         "gestion, le réapprovisionnement et l'agencement des stocks. La communication avec\n" +
-                        "les clients était également très présente.",
+                        "les clients était également très présente." +
+                        "Cela m'a permis de financer ma première année de bachelier à l'EPHEC tout en acquièrant de " +
+                        "l'expérience en travail d'équipe et communication.",
                     images: [brico1, brico2]
                 },
                 {
@@ -83,14 +87,15 @@ class Portfolio extends React.Component {
                     type: "Formation Développement applicatif",
                     name: "OpenClassrooms Apprenez à programmer en Java",
                     hoursSpent: 10,
+                    hoursValuable: 10,
                     date: "05/09/2020",
                     description: "Lors de la rentrée 2020, je me suis intéressé au développement applicatif avec Java. " +
                         "J'avais pour but d'avoir une première approche avec ce langage car il était prévu pour notre 2ème" +
                         " année à l'EPHEC mais finalement il avait été remplacé par le langage Python. Cela m'a permis tout " +
-                        "de même de pouvoir avoir une vision sur ce lanages et ses différences avec Python. La formation était divisée en 3 partie : " +
-                        " - Les bases du langages (Variables, Conditions, boucles,...) " +
-                        " - Programmation orienté objet (Polymorphisme, piles, paramètres" +
-                        " - Gestion d'erreurs, lambda, fichiers ",
+                        "de même de pouvoir avoir une vision sur ce langage et ses différences avec Python. La formation était divisée en 3 parties : " +
+                        " Les bases du langage (Variables, Conditions, boucles,...), " +
+                        "Programmation orienté objet (Polymorphisme, piles, paramètres), " +
+                        "Gestion d'erreurs, lambda et fichiers. ",
                     images: [formationjava1, formationjava2, formationjava3, formationjava4]
                 },
                 {
@@ -98,11 +103,12 @@ class Portfolio extends React.Component {
                     type: "Formation Développement Web",
                     name: "Passez au Full Stack avec Node.js, Express et MongoDB",
                     hoursSpent: 10,
+                    hoursValuable: 10,
                     date: "03/02/2021",
-                    description: "Lors du deuxième quadrimestre de ma deuxième année, je me suis intéressé" +
-                        "au framework nodejs, au backend express et à la base de données MongoDB" +
+                    description: "Lors du deuxième quadrimestre de ma deuxième année, je me suis intéressé " +
+                        "au framework nodejs, au backend express et à la base de données MongoDB " +
                         "Nous étions parti sur du Symfony pour notre projet web mais je cherchais un environnement s'adaptant " +
-                        "facilement avec le framework frontend React",
+                        "facilement avec le framework frontend React pour des futurs projets personnels.",
                     images: [formationnodejs1, formationnodejs2, formationnodejs3]
                 },
                 {
@@ -110,6 +116,7 @@ class Portfolio extends React.Component {
                     type: "Formation Hardware / électronique",
                     name: "à compléter",
                     hoursSpent: 10,
+                    hoursValuable: 10,
                     date: "Août 2022",
                     description: "",
                     images: [formationnodejs1, formationnodejs2, formationnodejs3, formationnodejs4]
@@ -119,15 +126,20 @@ class Portfolio extends React.Component {
                     type: "Conférence en présentiel",
                     name: "DevDay 2022",
                     hoursSpent: 9,
+                    hoursValuable: 9,
                     date: "23/11/2021",
-                    description: "Grâce à l'EPHEC, j'ai eu l'opportunité de pouvoir me rendre à l'édition 2022 du" +
-                        "Devday lors d'une journée. J'ai participé à 4 conférences:" +
-                        "- The Effective Developer - Work Smarter, Not Harder (EN)" +
-                        "- On peut vraiment faire tout ça avec une Web App?!? (FR)" +
-                        "- Visual Studio 2022 - Codez comme un ninja (FR)" +
-                        "- L'immutabilité c'est maintenant (C#) (FR)" +
-                        "- Introduction à Appcenter pour la distribution et le test" +
-                        "de vos applications mobiles (FR)",
+                    description: "Grâce à l'EPHEC, j'ai eu l'opportunité de pouvoir me rendre à l'édition 2022 du " +
+                        "Devday lors d'une journée. J'ai participé à 4 conférences: " +
+                        "The Effective Developer - Work Smarter, Not Harder (EN)," +
+                        "On peut vraiment faire tout ça avec une Web App?!? (FR), " +
+                        "Visual Studio 2022 - Codez comme un ninja (FR), " +
+                        "L'immutabilité c'est maintenant (C#) (FR), " +
+                        "Introduction à Appcenter pour la distribution et le test, " +
+                        "de vos applications mobiles (FR). Ces conférences étaient très intéressantes, celle qui m'a " +
+                        "le plus supris était celle sur les web app qui nous présentait les avantages de créer des " +
+                        "PWA pour nos applications web. C'est grâce à cette conférence que nous avons eu l'idée " +
+                        "d'intégrer cette technologie dans notre projet d'intégration de développement d'une " +
+                        "box domotique.",
                     images: [devday1, devday2, devday3, devday4]
                 },
                 {
@@ -135,22 +147,24 @@ class Portfolio extends React.Component {
                     type: "Conférence en distanciel",
                     name: "MIC Préparation au stage Conférence Git",
                     hoursSpent: 1,
+                    hoursValuable: 1,
                     date: "03/02/2022",
-                    description: "Pour les débuts de stage 2022, le MIC a organisé une journée de conférence pour apporter une aide" +
-                        "au étudiant démarrant leur stage en entreprise lors de ce 2 ème quadrimestre. J'ai alors assisté à la session " +
-                        "sur 'Git et Gitflow, la base pour avancer'. Étant plutôt habitué aux outils fournies par les IDE ou par Github Desktop" +
-                        "Cela m'a permit d'avoir un très bon rappel sur l'utilisation de git en ligne de commande.",
+                    description: "Pour les début de stage 2022, le MIC a organisé une journée de conférence pour apporter une aide " +
+                        "aux étudiants démarrant leur stage en entreprise lors de ce deuxième quadrimestre. J'ai alors assisté à la session " +
+                        "sur 'Git et Gitflow', la base pour avancer'. Étant plutôt habitué aux outils fournis par les IDE ou par Github Desktop " +
+                        "Cela m'a permis d'avoir un très bon rappel sur l'utilisation de git en ligne de commande et ses commandes principales.",
                     images: [mic1, mic2]
                 },
                 {
                     number: 7,
                     type: "Conférence en distanciel",
-                    name: "LeWagon Atelier DataAnalysis",
+                    name: "LeWagon Atelier DataAnalytics",
                     hoursSpent: 2,
+                    hoursValuable: 2,
                     date: "31/03/2022",
-                    description: "LeWagon est une école proposant des événements de formations d'initiation sur Bruxelles ou à distance." +
-                        "Je me suis intéressé à une des sessions sur le Data analysis avec les librairies pandas et NumPy." +
-                        "Lors de cette formation, il y avait une partie théorique et pratique dans l'environnement de " +
+                    description: "LeWagon est une école proposant des événements de formations d'initiation sur Bruxelles ou à distance. " +
+                        "Je me suis intéressé à une des sessions en anglais sur le Data analytics avec les librairies Pandas et NumPy. " +
+                        "Lors de cette formation, une partie théorique et pratique étaient proposés dans l'environnement de " +
                         "Jupyter Notebooks. J'ai été surpris de la qualité de cette formation complètement gratuite. ",
                     images: [lewagon1, lewagon2, lewagon3, lewagon4]
                 },
@@ -159,23 +173,27 @@ class Portfolio extends React.Component {
                     type: "Hackathon en présentiel",
                     name: "GameJam Louvain-Li-Nux 2022",
                     hoursSpent: 27,
+                    hoursValuable: 10,
                     date: "02/04/2022 au 03/04/2022",
                     description: "" +
-                        "Chaque année le kot à projet nommé \"Louvain-Li-nux\" organise une GameJam qui consiste à réaliser\n" +
-                        "                        un petit jeu vidéo en moins de 24h qui respestent les bonnes pratiques de l'open-source.\n" +
+                        "Chaque année le kot à projet \"Louvain-Li-nux\" organise une GameJam qui consiste à réaliser\n" +
+                        "                        un petit jeu vidéo en moins de 24h qui respecte les bonnes pratiques de l'open-source.\n" +
                         "                        Cette année le thème demandé était sur les \"catastrophes naturelles\". Cela était mon premier\n" +
                         "                        Hackathon que j'ai réalisé\n" +
-                        "                        avec un ami qui est étudiant à l'UCLouvain. Nous nous sommes orienté vers un jeu multijoueur en\n" +
-                        "                        python avec pygame\n" +
+                        "                        avec un ami étudiant à l'UCLouvain. Nous nous sommes orienté vers un jeu multijoueur en\n" +
+                        "                        python avec la librairie pygame\n" +
                         "                        1 contre tous où le but était d'utiliser des sorts (lave, tornades, éclairs) permettant\n" +
                         "                        d'éliminer\n" +
-                        "                        les autres joueurs et gagner le plus de points possible.\n" +
+                        "                        les autres joueurs et ainsi gagner le plus de points possible.\n" +
+                        "                        C'était également un chouette challenge pour nous d'avoir comme but de créer un jeu en multijoueur. De plus, nous avons réussi " +
+                        "                        à faire fonctionner le jeu avec un point d'accès wifi où les joueurs pouvaient se connecter pour jouer à notre jeu. " +
                         "\n" +
-                        "                        Sur place, un membre de Oniryx était présent pour répondre à nos questions\n" +
+                        "                        Sur place, un employé d'Oniryx était présent pour répondre à nos questions et nous conseiller sur nos choix.\n" +
                         "\n" +
                         "                        Ce fut une belle expérience, je n'avais pas vraiment l'habitude de développer dans le but de\n" +
-                        "                        créer un jeu vidéo",
-                    images: [gamejam1, gamejam2, gamejam3, gamejam4, gamejam5, gamejam6, gamejam7]
+                        "                        créer des jeux vidéos et cela m'a permis d'échanger avec de nouvelles personnes dans le domaine " +
+                        "                        de l'informatique externes à l'EPHEC",
+                    images: [gamejam1, gamejam2, gamejam3, gamejam4, gamejam5, gamejam6, gamejam7, gamejam8]
                 },
             ]
         }
@@ -342,7 +360,7 @@ class Portfolio extends React.Component {
                             <div className={"col"}>
                                 <h2 className={"text-center text-white"}> Projet Personnel </h2>
                                 <h5 className={"text-center text-white"}>
-                                    Passionné par les nouvelles technolgies, je m'intéresse en grande partieau développement
+                                    Passionné par les nouvelles technolgies, je m'intéresse en grande partie au développement
                                     web et applicatif, c'est pourquoi je souhaiterais approfondir mes connaissances
                                     dans des frameworks, langages et technologies. Le domaine du réseau m'attire également
                                     et j'aimerais passer la première certification cisco CCNA lorsque j'en aurais l'occasion.
