@@ -35,6 +35,10 @@ import formationnodejs2 from '../assets/images/activities/03-formationnodejs/for
 import formationnodejs3 from '../assets/images/activities/03-formationnodejs/formation-nodejs-completee01.png'
 import formationnodejs4 from '../assets/images/activities/03-formationnodejs/formation-nodejs-completee02.png'
 
+import formationdjango1 from '../assets/images/activities/04-formation/formation-django-dashboard.png'
+import formationdjango2 from '../assets/images/activities/04-formation/formation-django01.png'
+import formationdjango3 from '../assets/images/activities/04-formation/formation-django02.png'
+
 import devday1 from '../assets/images/activities/05-devday2022/logo-devday.png'
 import devday2 from '../assets/images/activities/05-devday2022/photo-groupe-devday.jpg'
 import devday3 from '../assets/images/activities/05-devday2022/devday01.jpg'
@@ -109,21 +113,21 @@ class Portfolio extends React.Component {
                         "au framework nodejs, au backend express et à la base de données MongoDB " +
                         "Nous étions parti sur du Symfony pour notre projet web mais je cherchais un environnement s'adaptant " +
                         "facilement avec le framework frontend React pour des futurs projets personnels.",
-                    images: [formationnodejs1, formationnodejs2, formationnodejs3]
-                },
-                {
-                    number: 4,
-                    type: "Formation Hardware / électronique",
-                    name: "à compléter",
-                    hoursSpent: 10,
-                    hoursValuable: 10,
-                    date: "Août 2022",
-                    description: "",
                     images: [formationnodejs1, formationnodejs2, formationnodejs3, formationnodejs4]
                 },
                 {
+                    number: 4,
+                    type: "Formation Développement Web",
+                    name: "Débutez avec le framework Django",
+                    hoursSpent: 10,
+                    hoursValuable: 10,
+                    date: "12/02/2022",
+                    description: "",
+                    images: [formationnodejs1, formationdjango1, formationdjango2, formationdjango3]
+                },
+                {
                     number: 5,
-                    type: "Conférence en présentiel",
+                    type: "Conférence en présentiel développement web, applicatif et réseaux",
                     name: "DevDay 2022",
                     hoursSpent: 9,
                     hoursValuable: 9,
@@ -144,7 +148,7 @@ class Portfolio extends React.Component {
                 },
                 {
                     number: 6,
-                    type: "Conférence en distanciel",
+                    type: "Conférence en distanciel développement",
                     name: "MIC Préparation au stage Conférence Git",
                     hoursSpent: 1,
                     hoursValuable: 1,
@@ -157,7 +161,7 @@ class Portfolio extends React.Component {
                 },
                 {
                     number: 7,
-                    type: "Conférence en distanciel",
+                    type: "Conférence en distanciel développement applicatif",
                     name: "LeWagon Atelier DataAnalytics",
                     hoursSpent: 2,
                     hoursValuable: 2,
